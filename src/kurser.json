@@ -34,59 +34,5 @@
         "coursename": "Frontend-baserad webbutveckling",
         "progression": "B",
         "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=31780"
-    },
-    {
-        "code": "dt207g",
-        "coursename": "Backend-baserad webbutveckling",
-        "progression": "B",
-        "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=31775"
-    },
-    {
-        "code": "dt208g",
-        "coursename": "Programmering i TypeScript",
-        "progression": "B",
-        "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=33568"
-    },
-    {
-        "code": "ik060g",
-        "coursename": "Projektledning",
-        "progression": "B",
-        "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=31886"
-    },
-    {
-        "code": "dt071g",
-        "coursename": "Programmering i C#.net",
-        "progression": "A",
-        "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=32587"
-    },
-    {
-        "code": "dt193g",
-        "coursename": "Fullstacks-utveckling med ramverk",
-        "progression": "B",
-        "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=33879"
-    },
-    {
-        "code": "dt209g",
-        "coursename": "Webbutveckling för WordPress",
-        "progression": "B",
-        "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=31777"
-    },    
-    {
-        "code": "dt191g",
-        "coursename": "Webbutveckling med .NET",
-        "progression": "B",
-        "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=32290"
-    },
-    {
-        "code": "dt210g",
-        "coursename": "Fördjupad frontend-utveckling",
-        "progression": "A",
-        "syllabus": "https://www.miun.se/kursplaner"
-    },
-    {
-        "code": "dt140g",
-        "coursename": "Självständigt arbete",
-        "progression": "B",
-        "syllabus": "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/Sok-kursplan/kursplan/?kursplanid=32439"
     }
 ]
