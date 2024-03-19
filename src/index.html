@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="kurser.ts" type="module"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kurser</h1>
+    <h2>Avklarade kurser</h2>
+    <div id="courses">
+
+    </div>
+    <h2>Lägg till kurs</h2>
+    <form id="userForm">
+        <label for="code">Kurskod:</label><br>
+        <input type="text" id="code" required>
+        <br>
+        <label for="name">Kursnamn:</label><br>
+        <input type="text" id="name" required>
+        <br>
+        <label for="progress">Progression:</label><br>
+        <input type="text" id="progress" required>
+        <br>
+        <label for="syllabus">studieplan(länk):</label><br>
+        <input type="text" id="syllabus" required>
+        <br>
+        <button type="submit">Lägg till kurs</button>
+    </form>
+
+    <h2>Ändra kurs</h2>
+    <label for="choose_course"></label>
+    <select name="choose_course" id="choose_course">
+        <option value="1">A</option>
+        <option value="1">A</option>
+        <option value="1">A</option>
+        <option value="1">A</option>
+        <option value="1">A</option>
+        <option value="1">A</option>
+    </select>
+
+    <form id="change_course">
+        <label for="change_code">Kurskod:</label><br>
+        <input type="text" id="change_code" required>
+        <br>
+        <label for="change_name">Kursnamn:</label><br>
+        <input type="text" id="change_name" required>
+        <br>
+        <label for="change_progress">Progression:</label><br>
+        <input type="text" id="change_progress" required>
+        <br>
+        <label for="change_syllabus">studieplan(länk):</label><br>
+        <input type="text" id="change_syllabus" required>
+        <br>
+        <button type="submit">Lägg till kurs</button>
+    </form>
+</body>
+</html>
