@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="kurser.ts" type="module"></script>
+    <link rel="stylesheet" href="css/style.scss">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Kurser</h1>
     <h2>Avklarade kurser</h2>
@@ -13,7 +16,7 @@
 
     </div>
     <h2>Lägg till kurs</h2>
-    <form id="userForm">
+    <div>
         <label for="code">Kurskod:</label><br>
         <input type="text" id="code" required>
         <br>
@@ -26,8 +29,8 @@
         <label for="syllabus">studieplan(länk):</label><br>
         <input type="text" id="syllabus" required>
         <br>
-        <button type="submit">Lägg till kurs</button>
-    </form>
+        <button type="button" id="add_course">Lägg till kurs</button>
+    </div>
 
     <h2>Ändra kurs</h2>
     <label for="choose_course"></label>
@@ -56,4 +59,5 @@
         <button type="submit">Lägg till kurs</button>
     </form>
 </body>
+
 </html>

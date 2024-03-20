@@ -1,0 +1,23 @@
+body {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #courses {
+    div {
+      width: 80%;
+      max-width: 600px;
+      padding: 5px;
+      margin: 10px auto;
+      border: 2px black solid;
+      *{
+        margin: 4px;
+      }
+    }
+  }
+}
