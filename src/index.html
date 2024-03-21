@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="kurser.ts" type="module"></script>
     <link rel="stylesheet" href="css/style.scss">
-    <title>Document</title>
+    <title>Kurser</title>
 </head>
 
 <body>
@@ -16,7 +16,8 @@
 
     </div>
     <h2>Lägg till kurs</h2>
-    <div>
+    <div class="inputDiv">
+        <p>Kurskod måste vara unik och progression kan bara vara "A", "B" eller "C"</p>
         <label for="code">Kurskod:</label><br>
         <input type="text" id="code">
         <br>
@@ -30,31 +31,26 @@
     </div>
 
     <h2>Ändra kurs</h2>
-    <label for="choose_course"></label>
-    <select name="choose_course" id="choose_course">
-        <option value="1">A</option>
-        <option value="1">A</option>
-        <option value="1">A</option>
-        <option value="1">A</option>
-        <option value="1">A</option>
-        <option value="1">A</option>
-    </select>
 
-    <form id="change_course">
-        <label for="change_code">Kurskod:</label><br>
-        <input type="text" id="change_code" required>
+    <div class="inputDiv">
+        <p>Tomma fält eller fält med som inte följer begränsningar kommer behålla sitt tidigare värde</p>
+        <label for="choose_course"></label>
+        <select name="choose_course" id="choose_course">
+        </select>
+        <label for="change_code">Ny kurskod:</label><br>
+        <input type="text" id="change_code">
         <br>
-        <label for="change_name">Kursnamn:</label><br>
-        <input type="text" id="change_name" required>
+        <label for="change_name">Nytt kursnamn:</label><br>
+        <input type="text" id="change_name">
         <br>
-        <label for="change_progress">Progression:</label><br>
-        <input type="text" id="change_progress" required>
+        <label for="change_progress">Ny progression:</label><br>
+        <input type="text" id="change_progress">
         <br>
-        <label for="change_syllabus">studieplan(länk):</label><br>
-        <input type="text" id="change_syllabus" required>
+        <label for="change_syllabus">Ny länk till studieplan:</label><br>
+        <input type="text" id="change_syllabus">
         <br>
-        <button type="submit">Lägg till kurs</button>
-    </form>
+        <button type="button" id="change_course_data">Ändra kursdata</button>
+    </div>
 </body>
 
 </html>
