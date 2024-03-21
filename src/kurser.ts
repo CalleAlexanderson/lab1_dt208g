@@ -4,7 +4,7 @@ let g: any;
 let f: string[] = [];
 let inStorage: boolean = true;
 
-if (localStorage.getItem("courses") != null) {
+if (localStorage.getItem("courses") != null && localStorage.getItem("courses") != '') {
   g = localStorage.getItem("courses");
   f = g.split(",");
   console.log(f);
@@ -20,14 +20,12 @@ interface CourseInfo {
   progression: string;
   syllabus: string;
 }
-console.log(inStorage);
 if (inStorage == false) {
   for (let index = 0; index < courses.length; index++) {
     addCourseFromJson(index);
   }
-} else{
-  for (let index = 0; index < f.length; index=index+4) {
-    console.log('tar från storage ' + index);
+} else {
+  for (let index = 0; index < f.length; index = index + 4) {
     addCourseFromStorage(index);
   }
 }
@@ -35,12 +33,12 @@ if (inStorage == false) {
 printCourses();
 console.log(coursesArr);
 
-function addCourseFromStorage(nr: number){
+function addCourseFromStorage(nr: number) {
   let kurs: CourseInfo = {
     code: f[nr],
-    name: f[nr+1],
-    progression: f[nr+2],
-    syllabus: f[nr+3],
+    name: f[nr + 1],
+    progression: f[nr + 2],
+    syllabus: f[nr + 3],
   };
   coursesArr.push(kurs);
 }
@@ -61,23 +59,54 @@ function addCourse() {
   let nameInput = (document.getElementById("name") as HTMLInputElement).value;
   let progInput = (document.getElementById("progress") as HTMLInputElement)
     .value;
-  let syllabusInput = (document.getElementById("syllabus") as HTMLInputElement)
-    .value;
+  let syllabusInput =
+    "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/" +
+    codeInput.toUpperCase() +
+    "/";
 
-  console.log(codeInput);
-  console.log(nameInput);
-  console.log(progInput);
-  console.log(syllabusInput);
+  if (
+    codeInput != "" &&
+    nameInput != "" &&
+    progInput != "" &&
+    syllabusInput != ""
+  ) {
+    let kurs: CourseInfo = {
+      code: codeInput,
+      name: nameInput,
+      progression: progInput,
+      syllabus: syllabusInput,
+    };
+    coursesArr.push(kurs);
+    printCourses();
+  } else {
+    alert("Var snäll och fyll i alla fält för att lägga till en kurs");
+  }
+}
 
-  let kurs: CourseInfo = {
-    code: codeInput,
-    name: nameInput,
-    progression: progInput,
-    syllabus: syllabusInput,
-  };
-  coursesArr.push(kurs);
-
+function deleteCourse() {
+  console.log(this.parentNode);
   console.log(coursesArr);
+
+  for (let index = 0; index < coursesArr.length; index++) {
+    let kod1: string = this.parentNode.children[0].innerHTML
+    let kod2: string = coursesArr[index].code
+    let name1: string = this.parentNode.children[1].innerHTML
+    let name2: string = coursesArr[index].name
+    let prog1: string = this.parentNode.children[2].innerHTML
+    let prog2: string = coursesArr[index].progression
+    let syll1: string = this.parentNode.children[3].href
+    let syll2: string = coursesArr[index].syllabus
+
+    if (
+      kod1 == kod2 &&
+      name1 == name2 &&
+      prog1 == prog2 &&
+      syll1 == syll2
+    ) {
+      console.log(coursesArr[index]);
+      coursesArr.splice(index, 1);
+    }
+  }
   printCourses();
 }
 
@@ -104,20 +133,19 @@ function printCourses() {
     a.href = coursesArr[index].syllabus;
     arr.push(coursesArr[index].syllabus);
 
+    let btn: HTMLButtonElement = document.createElement("button");
+    btn.innerHTML = "Ta bort";
+    btn.addEventListener("click", deleteCourse);
     capsule.appendChild(h3);
     capsule.appendChild(p1);
     capsule.appendChild(p2);
     capsule.appendChild(a);
+    capsule.appendChild(btn);
     div.appendChild(capsule);
   }
-  console.log(coursesArr);
-  console.log("arr " + arr);
   localStorage.setItem("courses", arr.join());
-  console.log("storage " + localStorage.getItem("courses"));
   let b: any;
   if (localStorage.getItem("courses") != null) {
     b = localStorage.getItem("courses");
-
-    console.log(b.split(","));
   }
 }
